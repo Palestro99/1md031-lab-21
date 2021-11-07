@@ -1,1 +1,110 @@
-Hello world
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Burger menu</title>
+    <meta charset="utf-8"/>
+</head>
+
+
+
+<body>
+    <header>
+    <h1>Välkommen till BurgerOnline</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Select burger</h2>
+                <p>This is where you execute burger selection</p>
+            <div style = "float:left">
+                <h3> Totally not friscoburgare </h3>
+                <img src="https://www.max.se/contentassets/093fc9201de04f648ea20afee581bafe/product_frisco-cheese-n-bacon.png" style="width: 200px" height="200px">
+                <ul>
+                    <li>Innehåller gluten</li>
+                    <li>Innehåller laktos</li>
+                    <li>Kan innehålla spår av nötter</li>
+                </ul>
+            </div>
+            <div style = "float:left">
+                <h3> Fakeburgare </h3>
+                <img src="https://thumbs.dreamstime.com/b/big-burger-isolated-white-43062448.jpg" style="width: 200px" height="200px">
+                <ul>
+                    <li>Innehåller ingenting</li>
+                    <li>Kan innehålla spår av nötter</li>
+                </ul>
+            </div>
+            <div style = "float:left">
+                <h3> Big burger </h3>
+                <img src="https://us.123rf.com/450wm/alexraths/alexraths2002/alexraths200200041/140781570-fresh-tasty-burger-on-dark-background.jpg?ver=6" style="width: 200px; height:200px">
+                <ul>
+                    <li>Innehåller big gluten</li>
+                    <li>Innehåller big laktos</li>
+                    <li>Kan innehålla big spår av nötter</li>
+                </ul>
+            </div>
+        </section>
+        <section style = "clear:left">
+            <div>
+                <h2>Customer information</h2>
+                    <p> This is where you provide necessary information</p> <!-- Kustomer information -->
+            </div>
+            <div id="contact">
+                <h3>
+                    Delivery information
+                </h3>
+                <form>
+                    <p>
+                        <label for="fullname">Full name</label><br>
+                        <input type="text" id="fullname" name="fn" required="required" placeholder="First- and last name">
+                    </p>
+                    <p>
+                        <label for="email">E-mail</label><br>
+                        <input type="email" id="email" name="em" required="required" placeholder="E-mail address">
+                    </p>
+                    <p>
+                        <label for="Street">Street</label><br>
+                        <input type="text" id="Street" name="st" placeholder="Street name">
+                    </p>
+                    <p>
+                        <label for="House">House</label><br>
+                        <input type="number" id="House" name="ho" placeholder="House number">
+                    </p>
+                </form>
+            </div>
+            <div>
+                <p>
+                    <label for="Payment method">Payment method</label><br>
+                    <select id="Payment method" name="rcp">
+                        <option selected="selected">Swish</option>
+                        <option>Klarna</option>
+                        <option>Bank transfer</option>
+                        <option>Cash</option>
+                    </select>
+                </p>
+            </div>
+            <div>
+
+                <p>
+                <label>Gender</label><br>
+                    <input type="radio" id="Male" name="gender" value="male" checked="checked">
+                    <label>Male</label><br>
+                    <input type="radio" id="Female" name="gender" value="female">
+                    <label>Female</label><br>
+                    <input type="radio" id="Not provided" name="gender" value="Do not wish to provide">
+                    <label>Do not wish to provide</label>
+                </p>
+            </div>
+            <div>
+                <button type="submit">
+                    <img src="https://thumbs.dreamstime.com/b/shopping-cart-icon-trolley-icon-shopping-cart-icon-trolley-icon-vector-illustration-isolated-white-background-163727286.jpg"style="width: 22px; height:22px">
+                    Place order
+                </button>
+            </div>
+        </section>
+    </main>
+    <hr>
+    <footer>
+        &copy; 2021 Simon Pettersson Palestro
+    </footer>
+</body>
+
+</html>
