@@ -1,1 +1,66 @@
 /*empty*/
+body {
+    font-family: "Times New Roman", sans-serif ;
+   /* font-family: Arial, Serif; */
+ /* font-family: "Courier New"; */
+}
+.ingredients {
+    font-weight: bold;
+}
+button:hover {
+    cursor:pointer;
+    color: white;
+    background: blue;
+}
+section {
+    margin: 1em;
+}
+#BurgerInformation > div {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+#BurgerInformation{
+    border: 2px dashed white;
+    color: white;
+    background: black;
+}
+#CustomerInformation{
+    border: 2px dashed black;
+    color: black;
+}
+#CustomerInformation > div {
+    padding-left: 1em;
+}
+#Header{
+    padding-right: 1em;
+    padding-left: 1em;
+    height:10em;
+    overflow:hidden;
+}
+#HeaderImage{
+    opacity:0.6;
+    height:auto;
+    width:100%;
+}
+#HeaderText{
+    position:absolute;
+    margin-top:-20em;
+    margin-left: 1em;
+    color: black;
+}
+.wrapper {
+    display: grid;
+    grid-gap: 60px;
+    grid-template-columns: 205px 205px 205px;
+    color: #444;
+}
+.box {
+    color: #fff;
+    border-radius: 50px;
+    padding: 1px;
+    border: 2px solid blue;
+}
+.box > h3 {
+    padding-left: 1em;
+}
+
