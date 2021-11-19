@@ -1,8 +1,6 @@
 /*empty*/
 body {
     font-family: "Times New Roman", sans-serif ;
-   /* font-family: Arial, Serif; */
- /* font-family: "Courier New"; */
 }
 .ingredients {
     font-weight: bold;
@@ -46,11 +44,11 @@ section {
     position:absolute;
     margin-top:-20em;
     margin-left: 1em;
-    color: black;
+    color: navajowhite;
 }
 .wrapper {
     display: grid;
-    grid-gap: 60px;
+    grid-gap: 30px;
     grid-template-columns: 205px 205px 205px;
     color: #444;
 }
@@ -61,6 +59,7 @@ section {
     border: 2px solid blue;
 }
 .box > h3 {
-    padding-left: 1em;
+    padding-left: 3em;
+    color: navajowhite;
 }
 

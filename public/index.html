@@ -1,116 +1,17 @@
-<!DOCTYPE HTML>
-<html lang="en">
-<head>
-    <title>Burger menu</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <meta charset="utf-8"/>
-</head>
-<body>
-    <div id="Header">
-        <img id="HeaderImage" src="https://www.freewpheaders.com/wp-content/gallery/food-gallery/burger-sandwich-header.jpg">
-        <header id="HeaderText">
-            <h1>Welcome to BurgerOnline</h1>
-        </header>
-    </div>
-    <main>
-        <section id="BurgerInformation">
-            <div>
-                <h2>Select burger</h2>
-                    <p>This is where you execute burger selection</p>
-            </div>
-            <div class="wrapper">
-                <div class="box a">
-                    <h3> Briscoburgare</h3>
-                    <img src="https://www.max.se/contentassets/093fc9201de04f648ea20afee581bafe/product_frisco-cheese-n-bacon.png" style="width: 200px" height="150px">
-                    <ul>
-                        <li>1100 kCal</li>
-                        <li>Contains <span class="ingredients">gluten</span> </li>
-                        <li>Contains <span class="ingredients">nuts</span></li>
-                    </ul>
-                </div>
-                <div class="box b" >
-                    <h3> Fakeburgare </h3>
-                    <img src="https://thumbs.dreamstime.com/b/big-burger-isolated-white-43062448.jpg" style="width: 200px" height="150px">
-                    <ul>
-                        <li>0 kCal</li>
-                        <li>Contains <span class="ingredients"> nuts</span></li>
-                        <li>Contains <span class="ingredients"> gluten</span></li>
-                    </ul>
-                </div>
-                <div class="box c">
-                    <h3> Big burger</h3>
-                    <img src="https://us.123rf.com/450wm/alexraths/alexraths2002/alexraths200200041/140781570-fresh-tasty-burger-on-dark-background.jpg?ver=6" style="width: 200px; height:150px">
-                    <ul>
-                        <li>1200 kCal</li>
-                        <li>Contains <span class="ingredients">gluten</span></li>
-                        <li>Contains <span class="ingredients">lactose</span></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <section id="CustomerInformation">
-            <div>
-                <h2>Customer information</h2>
-                    <p> This is where you provide necessary information</p> <!-- Kustomer information -->
-            </div>
-            <div id="contact">
-                <h3>
-                    Delivery information
-                </h3>
-                <form>
-                    <p>
-                        <label for="fullname">Full name</label><br>
-                        <input type="text" id="fullname" name="fn" required="required" placeholder="First- and last name">
-                    </p>
-                    <p>
-                        <label for="email">E-mail</label><br>
-                        <input type="email" id="email" name="em" required="required" placeholder="E-mail address">
-                    </p>
-                    <p>
-                        <label for="Street">Street</label><br>
-                        <input type="text" id="Street" name="st" placeholder="Street name">
-                    </p>
-                    <p>
-                        <label for="House">House</label><br>
-                        <input type="number" id="House" name="ho" placeholder="House number">
-                    </p>
-                </form>
-            </div>
-            <div>
-                <p>
-                    <label for="PaymentMethod">Payment method</label><br>
-                    <select id="PaymentMethod" name="rcp">
-                        <option selected="selected">Swish</option>
-                        <option>Klarna</option>
-                        <option>Bank transfer</option>
-                        <option>Cash</option>
-                    </select>
-                </p>
-            </div>
-            <div>
-
-                <p>
-                <label>Gender</label><br>
-                    <input type="radio" id="Male" name="gender" value="male" checked="checked">
-                    <label>Male</label><br>
-                    <input type="radio" id="Female" name="gender" value="female">
-                    <label>Female</label><br>
-                    <input type="radio" id="Not provided" name="gender" value="Do not wish to provide">
-                    <label>Do not wish to provide</label>
-                </p>
-            </div>
-        </section>
-        <div>
-            <button type="submit">
-                <img src="https://thumbs.dreamstime.com/b/shopping-cart-icon-trolley-icon-shopping-cart-icon-trolley-icon-vector-illustration-isolated-white-background-163727286.jpg"style="width: 22px; height:22px">
-                Place order
-            </button>
-        </div>
-    </main>
-    <hr>
-    <footer>
-        &copy; 2021 Simon Pettersson Palestro
-    </footer>
-</body>
-
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
 </html>

@@ -1,0 +1,25 @@
+[
+  {
+    "name": "Big Tasty",
+    "kCal": 1200,
+    "lactose": true,
+    "gluten": false,
+    "url": "https://thumbs.dreamstime.com/b/fresh-tasty-burger-black-background-appetizing-cheeseburger-meat-juicy-117403538.jpg"
+  }
+  ,
+  {
+    "name": "Big Nasty",
+    "kCal": 1500,
+    "lactose": false,
+    "gluten": true,
+    "url": "https://media.istockphoto.com/photos/burger-on-black-background-picture-id1240080543?k=20&m=1240080543&s=170667a&w=0&h=KHJlJmQepe4UFUIHw91-R33rdwjmpJBaQMDyAAhCHtQ="
+  }
+  ,
+  {
+    "name": "Big Chicken",
+    "kCal": 900,
+    "lactose": true,
+    "gluten": true,
+    "url": "https://img.freepik.com/free-photo/burger-black-background-menu_127425-580.jpg?size=626&ext=jpg"
+  }
+]

@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Burger menu</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8"/>
+</head>
+<body>
+    <div id="Header">
+        <img id="HeaderImage" src="https://www.freewpheaders.com/wp-content/gallery/food-gallery/burger-sandwich-header.jpg">
+        <header id="HeaderText">
+            <h1>Welcome to BurgerOnline</h1>
+        </header>
+    </div>
+    <main>
+        <section id="BurgerInformation">
+            <div>
+                <h2>Select burger</h2>
+                    <p>This is where you execute burger selection</p>
+            </div>
+            <div class="wrapper">
+                <div class="box a">
+                    <h3> Big Tasty</h3>
+                    <img src="https://media.istockphoto.com/photos/burger-on-black-background-picture-id1240080543?k=20&m=1240080543&s=170667a&w=0&h=KHJlJmQepe4UFUIHw91-R33rdwjmpJBaQMDyAAhCHtQ=" style="width: 200px" height="150px">
+                    <ul>
+                        <li>1100 kCal</li>
+                        <li>Contains <span class="ingredients">gluten</span> </li>
+                        <li>Contains <span class="ingredients">nuts</span></li>
+                    </ul>
+                </div>
+                <div class="box b" >
+                    <h3> Big Nasty </h3>
+                    <img src="https://thumbs.dreamstime.com/b/fresh-tasty-burger-black-background-appetizing-cheeseburger-meat-juicy-117403538.jpg" style="width: 200px" height="150px">
+                    <ul>
+                        <li>0 kCal</li>
+                        <li>Contains <span class="ingredients">nuts</span></li>
+                        <li>Contains <span class="ingredients">gluten</span></li>
+                    </ul>
+                </div>
+                <div class="box c">
+                    <h3> Big Chicken</h3>
+                    <img src="https://img.freepik.com/free-photo/burger-black-background-menu_127425-580.jpg?size=626&ext=jpg" style="width: 200px; height:150px">
+                    <ul>
+                        <li>1200 kCal</li>
+                        <li>Contains <span class="ingredients">gluten</span></li>
+                        <li>Contains <span class="ingredients">lactose</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="CustomerInformation">
+            <div>
+                <h2>Customer information</h2>
+                    <p> This is where you provide necessary information</p> <!-- Kustomer information -->
+            </div>
+            <div id="contact">
+                <h3>
+                    Delivery information
+                </h3>
+                <form>
+                    <p>
+                        <label for="fullname">Full name</label><br>
+                        <input type="text" id="fullname" name="fn" required="required" placeholder="First- and last name">
+                    </p>
+                    <p>
+                        <label for="email">E-mail</label><br>
+                        <input type="email" id="email" name="em" required="required" placeholder="E-mail address">
+                    </p>
+                    <p>
+                        <label for="Street">Street</label><br>
+                        <input type="text" id="Street" name="st" placeholder="Street name">
+                    </p>
+                    <p>
+                        <label for="House">House</label><br>
+                        <input type="number" id="House" name="ho" placeholder="House number">
+                    </p>
+                </form>
+            </div>
+            <div>
+                <p>
+                    <label for="PaymentMethod">Payment method</label><br>
+                    <select id="PaymentMethod" name="rcp">
+                        <option selected="selected">Swish</option>
+                        <option>Klarna</option>
+                        <option>Bank transfer</option>
+                        <option>Cash</option>
+                    </select>
+                </p>
+            </div>
+            <div>
+                <p>
+                <label>Gender</label><br>
+                    <input type="radio" id="Male" name="gender" value="male" checked="checked">
+                    <label>Male</label><br>
+                    <input type="radio" id="Female" name="gender" value="female">
+                    <label>Female</label><br>
+                    <input type="radio" id="Not provided" name="gender" value="Do not wish to provide">
+                    <label>Do not wish to provide</label>
+                </p>
+            </div>
+        </section>
+        <div>
+            <button type="submit">
+                <img src="https://thumbs.dreamstime.com/b/shopping-cart-icon-trolley-icon-shopping-cart-icon-trolley-icon-vector-illustration-isolated-white-background-163727286.jpg"style="width: 22px; height:22px">
+                Place order
+            </button>
+        </div>
+    </main>
+    <hr>
+    <footer>
+        &copy; 2021 Simon Pettersson Palestro
+    </footer>
+</body>
+
+</html>

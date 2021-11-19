@@ -21,7 +21,7 @@ export default {
   name: 'Dispatcher',
   data: function () {
     return {
-      orders: null
+      orders: null,
     }
   },
   created: function () {
