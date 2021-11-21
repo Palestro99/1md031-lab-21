@@ -39,14 +39,6 @@
             <label for="email">E-mail</label><br>
             <input type="email" id="email" v-model="em" required="required" placeholder="E-mail address">
           </p>
-          <p>
-            <label for="Street">Street</label><br>
-            <input type="text" id="Street" v-model="st" placeholder="Street name">
-          </p>
-          <p>
-            <label for="House">House</label><br>
-            <input type="number" id="House" v-model="hou" placeholder="House number">
-          </p>
 
       <div>
         <p>
@@ -72,14 +64,17 @@
       </div>
         </form>
       </div>
+      <div id="mapContainer">
+        <div id="map" v-on:click="setLocation">
+          <div id="dots">
+            <div v-bind:style="{ left: location.x + 'px',
+            top: location.y + 'px' }">
+              T
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-    <div id="map" v-on:click="addOrder">
-      click here
-    </div>
-<!-- <div v-bind:style="{ left: location.details.x + 'px',
-                      top: location.details.y + 'px' }">
-      T
-    </div>-->
     <div>
       <button type="submit" v-on:click="markDone">
         <img id = "ButtonImage" src="https://thumbs.dreamstime.com/b/shopping-cart-icon-trolley-icon-shopping-cart-icon-trolley-icon-vector-illustration-isolated-white-background-163727286.jpg">
@@ -91,7 +86,6 @@
   <footer>
     &copy; 2021 Simon Pettersson Palestro
   </footer>
-
 </template>
 
 <script>
@@ -127,8 +121,8 @@ export default {
       em:"",
       st:"",
       hou:"",
-      rcp:"",
-      gender:"",
+      rcp:"Swish",
+      gender:"Male",
       orderedBurgers:{},
       location: { x: 0,
         y: 0
@@ -139,32 +133,49 @@ export default {
     getOrderNumber: function () {
       return Math.floor(Math.random()*100000);
     },
-    addOrder: function (event) {
+   /*  addOrder: function (event) {
       var offset = {x: event.currentTarget.getBoundingClientRect().left,
                     y: event.currentTarget.getBoundingClientRect().top};
-      socket.emit("addOrder", { orderId: this.getOrderNumber(),
-                                details: { x: event.clientX - 10 - offset.x,
-                                           y: event.clientY - 10 - offset.y },
-                                orderItems: ["Beans", "Curry"]
-                              }
-                 );
+      console.log(this.location.x = event.clientX - 10 - offset.x,
+          this.location.y = event.clientY - 10 - offset.y,),
+      this.location.x = event.clientX - 10 - offset.x;
+      this.location.y = event.clientY - 10 - offset.y;
+    },*/
+    setLocation: function(event) {
+      var offset = {x: event.currentTarget.getBoundingClientRect().left,
+                    y: event.currentTarget.getBoundingClientRect().top};
+      this.location.x = event.clientX - 10 - offset.x;
+      this.location.y = event.clientY - 10 - offset.y;
+
     },
     addToOrder: function (event) {
       this.orderedBurgers[event.name] = event.amount;
     },
     markDone: function() {
-      console.log(this.em,this.fn,this.hou,this.st, this.rcp, this.gender, this.orderedBurgers)
+      console.log(this.em,this.fn, this.rcp, this.gender, this.orderedBurgers)
+      socket.emit("addOrder", { orderId: this.getOrderNumber(),
+            details: { x: this.location.x, y: this.location.y,
+              fn:this.fn, em:this.em, rcp:this.rcp, gender:this.gender},
+            orderItems: [this.orderedBurgers]
+          }
+      );
     },
   }
 }
 </script>
 
 <style>
+
+#mapContainer{
+  height: 500px;
+  width: 700px;
+  overflow:scroll;
+}
+
   #map {
     width: 1920px;
     height: 1078px;
     background: url("/img/polacks.jpg");
-    overflow:scroll;
   }
   body {
     font-family: "Times New Roman", sans-serif ;
@@ -220,4 +231,23 @@ export default {
     width: 20px;
     height: 20px;
   }
+/*#dots {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background: url(/img/polacks.jpg);
+  background-repeat: no-repeat;
+  width:1920px;
+  height: 1078px;
+  cursor: crosshair;
+}*/
+#dots div {
+  position: absolute;
+  background: black;
+  color: white;
+  border-radius: 10px;
+  width:20px;
+  height:20px;
+  text-align: center;
+}
 </style>
